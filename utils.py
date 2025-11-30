@@ -1,8 +1,7 @@
-import re
+import os
 import streamlit as st
 from Bio import Entrez
 from dotenv import load_dotenv
-import os
 
 load_dotenv()
 
@@ -17,7 +16,7 @@ def get_info(name):
 
         if not record["IdList"]:
             return "No match found in NCBI Taxonomy."
-        
+
         tax_id = record["IdList"][0]
         handle = Entrez.efetch(db="taxonomy", id=tax_id, retmode="xml")
         tax_record = Entrez.read(handle)
@@ -29,10 +28,10 @@ def get_info(name):
 
         full_lineage = " > ".join([item['ScientificName'] for item in lineage])
 
-        return{
+        return {
             "Scientific Name": scientific_name,
             "Rank": rank,
-            #"Taxonomy ID": tax_id,
+            # "Taxonomy ID": tax_id,
             "Lineage": full_lineage,
         }
     except Exception as e:
@@ -47,7 +46,8 @@ def parasite_card(image_url, parasite_name, description=""):
         if description:
             st.write(description)
 
-        if st.button(f"{parasite_name} taxonomy information", key=f"{parasite_name}_btn"):
+        if st.button(f"{parasite_name} taxonomy information",
+                     key=f"{parasite_name}_btn"):
             info = get_info(parasite_name)
 
             st.header("NCBI Taxonomical Information")
@@ -55,7 +55,8 @@ def parasite_card(image_url, parasite_name, description=""):
             if isinstance(info, str):
                 st.error(info)
             else:
-                st.success(f"**Name Found:** *{info['Scientific Name']}* ({info['Rank'].capitalize()})")
+                st.success(f"**Name Found:** *{info['Scientific Name']}*({info['Rank'].capitalize()})")
                 # st.markdown(f"**Taxonomy ID:** `{info['Taxonomy ID']}`")
                 st.markdown(f"**Full Lineage:** {info['Lineage']}")
                 st.markdown('---')
+    return None
