@@ -41,10 +41,11 @@ def get_info(name):
         return None
 
 
-def parasite_card(image_url, parasite_name, description=""):
+def parasite_card(parasite_name, image_url=None, description=""):
     with st.container(border=True):
         st.subheader(parasite_name)
-        st.image(image_url, width=250)
+        if image_url:
+            st.image(image_url, width=250)
         if description:
             st.write(description)
 
@@ -58,7 +59,7 @@ def parasite_card(image_url, parasite_name, description=""):
             if isinstance(info, str):
                 st.error(info)
             else:
-                st.success(f"**Name:** *{info['Scientific Name']}*({info['Rank']})")
+                st.success(f"*{info['Scientific Name']}*({info['Rank']})")
                 # st.markdown(f"**Taxonomy ID:** `{info['Taxonomy ID']}`")
                 st.markdown(f"**Full Lineage:** {info['Lineage']}")
                 st.markdown("---")

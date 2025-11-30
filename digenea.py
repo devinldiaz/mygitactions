@@ -11,14 +11,17 @@ row3 = st.columns(3)
 
 with row1[0]:
     parasite_card(
-        "https://www.bioworld.com/ext/resources/BWS/BWS-library/Schistosoma-parasite-infection.webp?",
         "Schistosoma mansoni",
+        "",
         "Causes intestinal schistosomiasis in humans",
     )
 
 with row1[1]:
-    tile = row1[1].container(height=300)
-    st.header("Schistosoma haematobium")
+    parasite_card(
+        "Schistosoma haematobium",
+        "",
+        "Causes urinary schistosomiasis in humans"
+    )
 
 with row1[2]:
     tile = row1[2].container(height=300)
