@@ -1,6 +1,6 @@
 from streamlit.testing.v1 import AppTest
 
-at = AppTest.from_file("home.py").run()
+at = AppTest.from_file("pages/home.py").run()
 
 
 def test_home_page_title():
