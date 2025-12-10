@@ -12,7 +12,7 @@ Navigate parasite classes, view species lists, open modals with details, and fet
 ## Tech Stack  
 **Framework:** Streamlit  
 **Language:** Python  
-**Data:** NCBI Entrez
+**Data:** NCBI Entrez  
 **Other:** BioPython, Matplotlib
 
 ## Current Features  
