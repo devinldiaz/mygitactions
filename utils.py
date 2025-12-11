@@ -52,9 +52,9 @@ def get_ncbi_info(name):
 
 
 def parasite_card(name, data):
-    st.image(data.get(
-        "image", "images/placeholder.jpg"),
-        width="stretch")
+    if data.get("image") is None:
+        data["image"] = "images/placeholder.jpg"
+    st.image(data.get("image"), width="stretch")
 
     @st.dialog(f"More about {name}")
     def show_details():

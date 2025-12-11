@@ -7,5 +7,5 @@ st.title("Chromadorea")
 if "DATASETS" not in st.session_state:
     st.session_state["DATASETS"] = {}
 
-dataset = st.session_state["DATASETS"].get("Chromadoea", {})
+dataset = st.session_state["DATASETS"].get("Chromadorea", {})
 parasite_tab_layout("Chromadorea", dataset)

@@ -164,7 +164,52 @@ cestoda = {
     }
 }
 
-chromadorea = {}
+chromadorea = {
+    "Loa loa": {
+        # "image": "images/loa_loa.jpg",
+        "description": "Causes loiasis in humans",
+        "taxonomy": {
+            "phylum": "Nematoda",
+            "class": "Chromadorea",
+            "order": "Spirurida",
+        },
+        "hosts": ["Humans", "Deerflies"],
+        "genome": "https://www.ncbi.nlm.nih.gov/.../loa_loa"
+    },
+    "Ascaris lumbricoides": {
+        # "image": "images/ascaris_lumbricoides.jpg",
+        "description": "Causes ascariasis in humans",
+        "taxonomy": {
+            "phylum": "Nematoda",
+            "class": "Chromadorea",
+            "order": "Ascaridida",
+        },
+        "hosts": ["Humans"],
+        "genome": "https://www.ncbi.nlm.nih.gov/.../ascaris_lumbricoides"
+    },
+    "Strongyloides stercoralis": {
+        # "image": "images/strongyloides_stercoralis.jpg",
+        "description": "Causes strongyloidiasis in humans",
+        "taxonomy": {
+            "phylum": "Nematoda",
+            "class": "Chromadorea",
+            "order": "Rhabditida",
+        },
+        "hosts": ["Humans"],
+        "genome": "https://www.ncbi.nlm.nih.gov/.../strongyloides_stercoralis"
+    },
+    "Anisakis simplex": {
+        # "image": "images/anisakis_simplex.jpg",
+        "description": "Causes anisakiasis in humans",
+        "taxonomy": {
+            "phylum": "Nematoda",
+            "class": "Chromadorea",
+            "order": "Ascaridida",
+        },
+        "hosts": ["Marine mammals", "Fish", "Humans"],
+        "genome": "https://www.ncbi.nlm.nih.gov/.../anisakis_simplex"
+    }
+}
 
 enoplea = {
     "Trichinella spiralis": {
@@ -177,5 +222,16 @@ enoplea = {
         },
         "hosts": ["Humans", "Pigs", "Wild Boar"],
         "genome": "https://www.ncbi.nlm.nih.gov/.../trichinella_spiralis"
+    },
+    "Trichuris trichiura": {
+        # "image": "images/trichuris_trichiura.jpg",
+        "description": "Causes trichuriasis in humans",
+        "taxonomy": {
+            "phylum": "Nematoda",
+            "class": "Enoplea",
+            "order": "Trichocephalida",
+        },
+        "hosts": ["Humans"],
+        "genome": "https://www.ncbi.nlm.nih.gov/.../trichuris_trichiura"
     }
 }
