@@ -2,3 +2,5 @@ streamlit
 biopython
 dotenv
 matplotlib
+pytest
+pytest-mock
